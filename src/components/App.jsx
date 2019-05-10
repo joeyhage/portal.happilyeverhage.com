@@ -8,7 +8,7 @@ import CreateInvite from './pages/CreateInvite';
 import Home from './pages/Home';
 import Invitation from './pages/Invitation';
 import Landing from './pages/Landing';
-import People from './pages/People';
+import InvitationList from './pages/InvitationList';
 
 class App extends React.Component {
 
@@ -25,7 +25,7 @@ class App extends React.Component {
          ?
          <Switch>
            <Route exact path='/' render={(props) => <Home auth={auth} {...props} />} />
-           <Route exact path='/people' render={(props) => <People auth={auth} {...props} />} />
+           <Route exact path='/list' render={(props) => <InvitationList auth={auth} {...props} />} />
            <Route exact path='/invitation' render={(props) => <Invitation auth={auth} {...props} />} />
            <Route exact path='/create-invite' render={(props) => <CreateInvite auth={auth} {...props} />} />
            <Redirect to='/' />

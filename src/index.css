@@ -88,11 +88,11 @@ body .table.is-hoverable tbody tr:not(.is-selected):hover {
     background-color: #06182b;
     color: #e9f2fc;
 }
-button.button, button.button.is-text:hover {
+span.button, button.button, button.button.is-text:hover {
     background-color: #0c325a;
     color: #e9f2fc;
 }
-button.button:hover {
+span.button:hover, button.button:hover {
     background-color: #06182b;
     color: #e9f2fc;
 }
@@ -101,6 +101,10 @@ button.button.is-text {
 }
 div.field {
     margin: 2em auto;
+}
+span.button.is-selected {
+  background-color: #460d26;
+  color: #fff;
 }
 /* Navigation */
 nav.navbar {
@@ -135,4 +139,9 @@ nav.navbar {
 }
 #navigation a.navbar-item.is-page-link.is-active {
     color: #fff;
+}
+
+/* Invitation List Page */
+#invitation-list-page .buttons .button {
+
 }
