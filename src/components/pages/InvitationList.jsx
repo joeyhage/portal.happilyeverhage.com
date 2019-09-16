@@ -38,9 +38,11 @@ export default class InvitationList extends React.Component {
                <span className={this._filterButtonClass('accept')} id='accept'
                      onClick={this._updateFilter}>Accept</span>
                <span className={this._filterButtonClass('partial-accept')} id='partial-accept'
-                     onClick={this._updateFilter}>Partial Accept</span>
+                     onClick={this._updateFilter}>Partial</span>
                <span className={this._filterButtonClass('regret')} id='regret'
                      onClick={this._updateFilter}>Regret</span>
+               <span className={this._filterButtonClass('no-response')} id='no-response'
+                     onClick={this._updateFilter}>No RSVP</span>
              </div>
              <table className='table is-hoverable is-fullwidth'>
                <thead>
@@ -97,6 +99,9 @@ export default class InvitationList extends React.Component {
         break;
       case 'accept':
         filter = Boolean(rsvp_date) && invite_count === rsvp_count;
+        break;
+      case 'no-response':
+        filter = !Boolean(rsvp_date);
         break;
       default:
         filter = true;

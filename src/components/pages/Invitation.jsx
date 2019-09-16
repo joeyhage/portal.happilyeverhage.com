@@ -53,7 +53,7 @@ export default class Invitation extends React.Component {
                      <p className='heading'>RSVP Date</p>
                      <p className='title'>
                        {Boolean(invite.rsvp_date)
-                        ? dateFormat(invite.rsvp_date, 'mediumDate')
+                        ? dateFormat(invite.rsvp_date, 'mediumDate', true)
                         : 'N/A'
                        }
                      </p>
